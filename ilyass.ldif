@@ -1,0 +1,16 @@
+dn: uid=ilyass,ou=People,dc=ensaf,dc=local
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: ilyass
+uid: ilyass
+uidNumber: 16859
+gidNumber: 100
+homeDirectory: /home/ilyass
+loginShell: /bin/bash
+gecos: ilyass
+userPassword: {crypt}x
+shadowLastChange: 0
+shadowMax: 0
+shadowWarning: 0

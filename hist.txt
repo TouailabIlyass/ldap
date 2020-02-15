@@ -1,0 +1,136 @@
+    1  shutdown -t 0
+    2  shutdown now
+    3  yum -y install openssh-server
+    4  ip a
+    5  shutdown now
+    6  ip a
+    7  yum -y install openssh-server
+    8  shutdown now
+    9  yum -y install openldap compat-openldap openldap-clients openldap-servers openldap-servers-sql openldap-devel
+   10  shutdown now
+   11  ip a
+   12  yum -y install openssh-server
+   13  ip a
+   14  exit
+   15  systemctl enable slapd
+   16  systemctl start slapd
+   17  systemctl start slapd.service
+   18  systemctl disable slapd
+   19  systemctl start slapd
+   20  systemctl status slapd
+   21  less /var/log/messages 
+   22  journalctl -xe
+   23  systemctl status slapd
+   24  systemctl start slapd
+   25  vi /etc/hosts
+   26  systemctl start slapd
+   27  shutdown -r now
+   28  systemctl start slapd
+   29  shutdown  now
+   30  mkdir /tmp/openldap/
+   31  cd /tmp/openldap/
+   32  wget https://rpmfind.net/linux/centos/7.4.1708/os/x86_64/Packages/openldap-clients-2.4.44-5.el7.x86_64.rpm
+   33  yum -y install wget
+   34  exit
+   35   pidfile     /run/openldap/slapd.pid
+   36  rpm -V openldap-server
+   37  yum -y install openssh-servers
+   38  rpm -V openldap-servers
+   39  systemctl start slapd
+   40  cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
+   41  chown ldap. /var/lib/ldap/DB_CONFIG
+   42  systemctl start slapd
+   43  cd /etc/openldap/
+   44  ls
+   45  vi ldap.conf 
+   46  systemctl start slapd
+   47  shutdown now
+   48  ip a
+   49  yum update
+   50  cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
+   51  shown ldap:ldap /var/lib/ldap/*
+   52  chown ldap:ldap /var/lib/ldap/*
+   53  systemctl start slapd
+   54  ip a
+   55  systemctl start slapd
+   56  systemctl restart ldap
+   57  systemctl restart slapd
+   58  journalctl DD DD-xe
+   59  yum -y upgrade
+   60  systemctlAAAAABrr DDrestart ldap
+   61  systemctl start slapd
+   62  systemctl stop slapd
+   63  exit
+   64  ip a
+   65  ls -l /etc/openldap/ldap.conf 
+   66  ls -l /etc/openldap/
+   67  ls -la /etc/openldap/
+   68  shutdown now
+   69  netstat -antup | grep -i 389
+   70  yum -y install netstat wget
+   71  yum -y install netstat
+   72  slappasswd -h {SSHA}
+   73  cd /etc/openldap/slapd.d/
+   74  ls
+   75  vi db.ldif
+   76  ldapmodify -Y EXTERNAL  -H ldapi:/// -f db.ldif
+   77  ls
+   78  vi monitor.ldif
+   79  ldapmodify -Y EXTERNAL  -H ldapi:/// -f monitor.ldif
+   80  ls
+   81  cd cn\=config/olcDatabase\=\{1\}monitor.ldif 
+   82  cd cn\=config/olcDatabase
+   83  cd cn\=config/
+   84  ls
+   85  vim olcDatabase\=\{1\}monitor.ldif 
+   86  vi olcDatabase\=\{1\}monitor.ldif 
+   87  vi monitor.ldif
+   88  cd -
+   89  ls
+   90  vi monitor.ldif
+   91  cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
+   92  chown ldap:ldap /var/lib/ldap/*
+   93  ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/cosine.ldif
+   94  ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/nis.ldif 
+   95  ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/inetorgperson.ldif
+   96  vi base.ldif
+   97  #ldapadd -x -W -D "cn=ldapadm,dc=itzgeek,dc=local" -f base.ldif
+   98  ldapadd -x -W -D "cn=ldapadm,dc=ensaf,dc=local" -f base.ldif
+   99  firewall-cmd --add-service=ldap --permanent
+  100  firewall-cmd --reloa
+  101  firewall-cmd --reload
+  102  cd
+  103  vi /etc/hosts
+  104  shutdown now
+  105  ip a
+  106  systemctl start slapd
+  107  systemctl enable slapd
+  108  ip a
+  109  ping server
+  110  ping localhost
+  111  ping centserver
+  112  ping server
+  113  ping ensaf
+  114  vi /etc/hosts
+  115  ping localhost4
+  116  vi /etc/hosts
+  117  ping ensaf
+  118  ping ensaf.local
+  119  ping server
+  120  vi /etc/hosts
+  121  ping server
+  122  exit
+  123  vi ilyass.ldif
+  124  # ldapadd -x -W -D "cn=ldapadm,dc=ensaf,dc=local" -f ilyass.ldif
+  125   ldapadd -x -W -D "cn=ldapadm,dc=ensaf,dc=local" -f ilyass.ldif
+  126  vi ilyass.ldif
+  127   ldapadd -x -W -D "cn=ldapadm,dc=ensaf,dc=local" -f ilyass.ldif
+  128  # ldappasswd -s welcome123 -W -D "cn=ramesh,dc=tgs,dc=com" -x "uid=adam,ou=users,dc=tgs,dc=com"
+  129   ldappasswd -s welcome123 -W -D "cn=ldapadm,dc=ensaf,dc=local" -x "uid=ilyass,ou=People,dc=ensaf,dc=local"
+  130   ldappasswd -s 123 -W -D "cn=ldapadm,dc=ensaf,dc=local" -x "uid=ilyass,ou=People,dc=ensaf,dc=local"
+  131  exit
+  132  shutdown now
+  133  history 
+  134  history > hist.txt
+ ldapsearch -xLLL  -b "ou=People,dc=ensaf,dc=local" cn=ldapadm
+ldapsearch -xLLL  -b "dc=ensaf,dc=local" cn=ldapadm

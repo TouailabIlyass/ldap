@@ -1,0 +1,5 @@
+dn: ou=Etudiants,dc=ensaf,dc=local
+objectClass: top
+objectClass: organizationalUnit
+ou: Etudiants
+description: unit for ensaf students

@@ -1,0 +1,25 @@
+dn: uid=ilyass,ou=People,dc=ensaf,dc=local
+changetype: modify
+add: objectClass
+objectClass: std
+-
+add: stdcne
+stdcne: 111122
+-
+add: stdcin
+stdcin: hh12606
+-
+add: stddepartment
+stddepartment: genieinfo
+-
+add: stdbranch
+stdbranch: ginfo
+-
+add: stdlevel
+stdlevel: 2
+-
+add: stdyearinscription
+stdyearinscription: 2018
+-
+add: stdyeargraduate
+stdyeargraduate: 2020

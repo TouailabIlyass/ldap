@@ -1,0 +1,377 @@
+    1  shutdown -t 0
+    2  shutdown now
+    3  yum -y install openssh-server
+    4  ip a
+    5  shutdown now
+    6  ip a
+    7  yum -y install openssh-server
+    8  shutdown now
+    9  yum -y install openldap compat-openldap openldap-clients openldap-servers openldap-servers-sql openldap-devel
+   10  shutdown now
+   11  ip a
+   12  yum -y install openssh-server
+   13  ip a
+   14  exit
+   15  systemctl enable slapd
+   16  systemctl start slapd
+   17  systemctl start slapd.service
+   18  systemctl disable slapd
+   19  systemctl start slapd
+   20  systemctl status slapd
+   21  less /var/log/messages 
+   22  journalctl -xe
+   23  systemctl status slapd
+   24  systemctl start slapd
+   25  vi /etc/hosts
+   26  systemctl start slapd
+   27  shutdown -r now
+   28  systemctl start slapd
+   29  shutdown  now
+   30  mkdir /tmp/openldap/
+   31  cd /tmp/openldap/
+   32  wget https://rpmfind.net/linux/centos/7.4.1708/os/x86_64/Packages/openldap-clients-2.4.44-5.el7.x86_64.rpm
+   33  yum -y install wget
+   34  exit
+   35   pidfile     /run/openldap/slapd.pid
+   36  rpm -V openldap-server
+   37  yum -y install openssh-servers
+   38  rpm -V openldap-servers
+   39  systemctl start slapd
+   40  cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
+   41  chown ldap. /var/lib/ldap/DB_CONFIG
+   42  systemctl start slapd
+   43  cd /etc/openldap/
+   44  ls
+   45  vi ldap.conf 
+   46  systemctl start slapd
+   47  shutdown now
+   48  ip a
+   49  yum update
+   50  cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
+   51  shown ldap:ldap /var/lib/ldap/*
+   52  chown ldap:ldap /var/lib/ldap/*
+   53  systemctl start slapd
+   54  ip a
+   55  systemctl start slapd
+   56  systemctl restart ldap
+   57  systemctl restart slapd
+   58  journalctl DD DD-xe
+   59  yum -y upgrade
+   60  systemctlAAAAABrr DDrestart ldap
+   61  systemctl start slapd
+   62  systemctl stop slapd
+   63  exit
+   64  ip a
+   65  ls -l /etc/openldap/ldap.conf 
+   66  ls -l /etc/openldap/
+   67  ls -la /etc/openldap/
+   68  shutdown now
+   69  netstat -antup | grep -i 389
+   70  yum -y install netstat wget
+   71  yum -y install netstat
+   72  slappasswd -h {SSHA}
+   73  cd /etc/openldap/slapd.d/
+   74  ls
+   75  vi db.ldif
+   76  ldapmodify -Y EXTERNAL  -H ldapi:/// -f db.ldif
+   77  ls
+   78  vi monitor.ldif
+   79  ldapmodify -Y EXTERNAL  -H ldapi:/// -f monitor.ldif
+   80  ls
+   81  cd cn\=config/olcDatabase\=\{1\}monitor.ldif 
+   82  cd cn\=config/olcDatabase
+   83  cd cn\=config/
+   84  ls
+   85  vim olcDatabase\=\{1\}monitor.ldif 
+   86  vi olcDatabase\=\{1\}monitor.ldif 
+   87  vi monitor.ldif
+   88  cd -
+   89  ls
+   90  vi monitor.ldif
+   91  cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
+   92  chown ldap:ldap /var/lib/ldap/*
+   93  ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/cosine.ldif
+   94  ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/nis.ldif 
+   95  ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/inetorgperson.ldif
+   96  vi base.ldif
+   97  #ldapadd -x -W -D "cn=ldapadm,dc=itzgeek,dc=local" -f base.ldif
+   98  ldapadd -x -W -D "cn=ldapadm,dc=ensaf,dc=local" -f base.ldif
+   99  firewall-cmd --add-service=ldap --permanent
+  100  firewall-cmd --reloa
+  101  firewall-cmd --reload
+  102  cd
+  103  vi /etc/hosts
+  104  shutdown now
+  105  ip a
+  106  systemctl start slapd
+  107  systemctl enable slapd
+  108  ip a
+  109  ping server
+  110  ping localhost
+  111  ping centserver
+  112  ping server
+  113  ping ensaf
+  114  vi /etc/hosts
+  115  ping localhost4
+  116  vi /etc/hosts
+  117  ping ensaf
+  118  ping ensaf.local
+  119  ping server
+  120  vi /etc/hosts
+  121  ping server
+  122  exit
+  123  vi ilyass.ldif
+  124  # ldapadd -x -W -D "cn=ldapadm,dc=ensaf,dc=local" -f ilyass.ldif
+  125   ldapadd -x -W -D "cn=ldapadm,dc=ensaf,dc=local" -f ilyass.ldif
+  126  vi ilyass.ldif
+  127   ldapadd -x -W -D "cn=ldapadm,dc=ensaf,dc=local" -f ilyass.ldif
+  128  # ldappasswd -s welcome123 -W -D "cn=ramesh,dc=tgs,dc=com" -x "uid=adam,ou=users,dc=tgs,dc=com"
+  129   ldappasswd -s welcome123 -W -D "cn=ldapadm,dc=ensaf,dc=local" -x "uid=ilyass,ou=People,dc=ensaf,dc=local"
+  130   ldappasswd -s 123 -W -D "cn=ldapadm,dc=ensaf,dc=local" -x "uid=ilyass,ou=People,dc=ensaf,dc=local"
+  131  exit
+  132  shutdown now
+  133  ip a
+  134  exit
+  135  history 
+  136  history > hist.txt
+  137  #ldapsearch -xLLL uid=varp
+  138  ldapsearch -xLLL uid=ilyass
+  139  ls
+  140  ldapsearch -xLLL uid=ilyass
+  141  ls
+  142  cat ilyass.ldif 
+  143  ldapsearch -xLLL uid="ilyass"
+  144  ldapsearch -xLLL uid="ilyass" cn ilyass
+  145  ldapsearch  uid=ilyass
+  146  ldapsearch  -LLL uid=ilyass
+  147  ldapsearch  LLL uid=ilyass
+  148  ldapsearch  -x uid=ilyass
+  149  adduser ilyass
+  150  passwd ilyass
+  151  ldapsearch  -x uid=ilyass
+  152  ldapsearch  -xLLL uid=ilyass
+  153  ldapsearch  -xLLL uid=ldapadm
+  154  ldapsearch -H ldap:// -x -D "uid=ilyass"
+  155  ldapsearch -H ldap:// -x -D "cn=ldapadm,dc=ensaf,dc=local" -W
+  156  ldapsearch  -xLLL uid=ilyass
+  157  yum -y install openldap-clients
+  158  se3pdc:~# ldapsearch -xLLL uid=varp uid cn gecos
+  159   ldapsearch -xLLL uid=ilyass uid cn ilyass
+  160   ldapsearch -xLLL uid=ilyass
+  161  cat ilyass.ldif 
+  162   ldapsearch -xLLL uidNumber=16859
+  163   ldapadd -x -W -D "cn=ldapadm,dc=ensaf,dc=local" -f ilyass.ldif
+  164   ldapsearch -xLLL -W uidNumber=16859
+  165   ldapsearch -xLLL -W -D "cn=ldapadm,dc=ensaf,dc=local" uidNumber=16859
+  166   ldapsearch -xLLL -W -D "cn=ldapadm,dc=ensaf,dc=local" "uid=ilyass"
+  167   ldapsearch -xLLL -W "uid=ilyass"
+  168   ldapsearch -xLLL  "uid=ilyass"
+  169   ldapsearch -xLLL  "uid=ldapadm"
+  170  shutdown now
+  171  slapcat 
+  172   ldapsearch -xLLL -h localhost "uid=ldapadm"
+  173   ldapsearch -xLLL -h localhost -W -b "ou=People,dc=ensaf,dc=local" "uid=ldapadm"
+  174   ldapsearch -xLLL -h localhost -W -b "ou=People,dc=ensaf,dc=local" "uid=ilyass"
+  175   ldapsearch -xLLL -h localhost -W -b "dc=ensaf,dc=local" "uid=ilyass"
+  176  #ldapsearch -x cn=raj -b dc=itzgeek,dc=local
+  177  ldapsearch -x cn=ilyass -b dc=ensaf,dc=local
+  178  ldapsearch -xLLL cn=ilyass -b dc=ensaf,dc=local
+  179  ldapsearch -xLLL cn=ilyass
+  180  ldapsearch -xLLL cn=ilyass -b localhost
+  181  ldapsearch -xLLL cn=ilyass -b "dc=ensaf,dc=local"
+  182  ldapsearch -xLLL cn=ilyass -b "ou=People,dc=ensaf,dc=local"
+  183  ldapsearch -xLLL  -b "ou=People,dc=ensaf,dc=local" cn=ilyass
+  184  ldapsearch -xLLL  -b "ou=People,dc=ensaf,dc=local" cn=ldapadm
+  185  ldapsearch -xLLL  -b "dc=ensaf,dc=local" cn=ldapadm
+  186  vi hist.txt 
+  187  exit
+  188  ldapsearch -xLLL  -b "dc=ensaf,dc=local" cn=ldapadm
+  189  ldapsearch -xLLL  -b "dc=ensaf,dc=local" cn=ilyass
+  190  ldapsearch -xLLL  -b "dc=ensaf,dc=local" cn=ilyass dn
+  191  ldapsearch -xLLL  -b "dc=ensaf,dc=local" cn=ilyass dn cn
+  192  ls
+  193  vi addphone.ldif
+  194  ldapsearch -xLLL  -b "dc=ensaf,dc=local" cn=ilyass dn cn
+  195  vi addphone.ldif
+  196  ldapmodify -f addphone.ldif 
+  197  vi addphone.ldif
+  198  ldapmodify -f addphone.ldif 
+  199  vi addphone.ldif
+  200  ldapmodify -f addphone.ldif 
+  201  ldapmodify -f addphone.ldif -b "dc=ensaf,dc=local"
+  202  ldapmodify -f addphone.ldif -h localhost
+  203  ldapmodify -f addphone.ldif
+  204  vi addphone.ldif
+  205  ldapmodify -f addphone.ldif
+  206  vi addphone.ldif
+  207  ldapmodify -f addphone.ldif
+  208  vi addphone.ldif
+  209  ldapmodify -f addphone.ldif
+  210  vi addphone.ldif
+  211  ldapmodify -f addphone.ldif
+  212  ldapmodify -D "uid=ldapadm,dc=ensaf,dc=local" -f addphone.ldif
+  213  ldapmodify -D "cn=ldapadm,dc=ensaf,dc=local" -f addphone.ldif
+  214  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -f addphone.ldif
+  215  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -f addphone.ldif
+  216  vi addphone.ldif
+  217  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -f addphone.ldif
+  218  vi addphone.ldif
+  219  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -f addphone.ldif
+  220  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  221  vi addphone.ldif
+  222  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  223  vi addphone.ldif
+  224  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  225  vi addphone.ldif
+  226  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  227  ldapsearch -xLLL  -b "dc=ensaf,dc=local" cn=ilyass dn cn
+  228  ldapsearch -xLLL  -b "dc=ensaf,dc=local"
+  229  vi addphone.ldif
+  230  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  231  vi addphone.ldif
+  232  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  233  vi addphone.ldif
+  234  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  235  ldapsearch -xLLL  -b "dc=ensaf,dc=local"
+  236  vi addphone.ldif
+  237  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  238  ldapsearch -xLLL  -b "dc=ensaf,dc=local"
+  239  vi addphone.ldif
+  240  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  241  vi addphone.ldif
+  242  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  243  cd /etc/openldap/
+  244  ls
+  245  cd schema/
+  246  ls
+  247  vi openldap.schema 
+  248  vi nis.schema 
+  249  ls
+  250  vi cust
+  251  vi nis.ldif 
+  252  cd ..
+  253  ls
+  254  cd slapd.d/
+  255  ls
+  256  less base.ldif 
+  257  less monitor.ldif 
+  258  cd ..
+  259  cd schema/
+  260  vi custom.shema 
+  261  vi custom.ldif
+  262  cp custom.shema custom.schema
+  263  vi custom.schema 
+  264  cd
+  265  cd -
+  266  #ldapadd -x -h 192.168.2.3 -D "cn=admin,cn=config" -W -f ./custom.ldif
+  267  ldapadd -x  -D "cn=ldapadm,dn=ensaf,dn=local" -W -f ./custom.ldif
+  268  ldapadd -x  -D "uid=ldapadm,dn=ensaf,dn=local" -W -f ./custom.ldif
+  269  ldapadd -x  -D "cn=ldapadm,dc=ensaf,dc=local" -W -f ./custom.ldif
+  270  vi custom.ldif 
+  271  ls
+  272  vi nis.ldif 
+  273  cd
+  274  ls
+  275  vi addphone.ldif 
+  276  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  277  systemctl start slapd
+  278   ldapsearch -xLLL  "uid=ilyass"
+  279   ldapsearch -xLLL  "uid=ilyass,ou=People"
+  280   ldapsearch -xLLL  "ou=People"
+  281   ldapsearch -LLL  "ou=People"
+  282   ldapsearch -LLL  "uid=ilyass"
+  283   ldapsearch -xLLL  "uid=ilyass"
+  284   ldapsearch -x
+  285  slapcat 
+  286  shutdown now
+  287  ip a
+  288  ls
+  289  shutdown now
+  290  cd /etc/openldap/schema/
+  291  ls
+  292  vi custom.schema 
+  293  vi custom.ldif 
+  294  ldapadd -Y EXTERNAL -H ldapi:/// -f custom.ldif 
+  295  cd
+  296  ldapsearch -Q -LLL -Y EXTERNAL -H ldapi:/// -b cn=config
+  297  ldapsearch -Q -LLL -Y EXTERNAL -H ldapi:/// -b cn=config cn=cutom
+  298  ldapsearch -Q -LLL -Y EXTERNAL -H ldapi:/// -b cn=config cn=custom
+  299  ldapsearch -Q -LLL -Y EXTERNAL -H ldapi:/// -b cn=config cn=*custom
+  300  ls
+  301  vi ilyass.ldif 
+  302  vi addphone.ldif 
+  303  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  304  vi addphone.ldif 
+  305  cd -
+  306  l
+  307  ls
+  308  vi custom.schema 
+  309  ls
+  310  cp custom.schema mail2.schema
+  311  vi mail2.schema 
+  312  pwd
+  313  mkdir /tmp/open
+  314  cd /tmp/open
+  315  vi slapd.conf
+  316  slaptest -f slapd.conf -F .
+  317  cd -
+  318  ls
+  319  vi nis.ldif 
+  320  vi mail2.schema 
+  321  cd -
+  322  slaptest -f slapd.conf -F .
+  323  ls
+  324  vi slapd.conf 
+  325  cd -
+  326  ls
+  327  vi nis.schema 
+  328  cd -
+  329  slaptest -f slapd.conf -F .
+  330  cd -
+  331  vi mail2.schema 
+  332  cd -
+  333  slaptest -f slapd.conf -F .
+  334  l
+  335  ls
+  336  cd cn\=config
+  337  l
+  338  ls
+  339  cd cn\=schema
+  340  ls
+  341  vi cn\=\{0\}mail2.ldif 
+  342  ldapadd -Y EXTERNAL -H ldapi:/// -f cn\=\{0\}mail2.ldif 
+  343  ldapsearch -Q -LLL -Y EXTERNAL -H ldapi:/// -b cn=config cn=*mail2
+  344  cd
+  345  ls
+  346  vi addphone.ldif 
+  347  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  348  vi addphone.ldif 
+  349  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  350  vi addphone.ldif 
+  351  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  352  vi addphone.ldif 
+  353  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  354  vi addphone.ldif 
+  355  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  356  vi addphone.ldif 
+  357  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f addphone.ldif
+  358  cp addphone.ldif a2.ldif
+  359  v a2.ldif 
+  360  vi a2.ldif 
+  361  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f a2.ldif 
+  362  vi a2.ldif 
+  363  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f a2.ldif 
+  364  vi a2.ldif 
+  365  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f a2.ldif 
+  366  vi a2.ldif 
+  367  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f a2.ldif 
+  368  vi a2.ldif 
+  369  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f a2.ldif 
+  370  cp addphone.ldif a1.ldif
+  371  vi a1.ldif 
+  372  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f a1.ldif 
+  373  vi a1.ldif 
+  374  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f a1.ldif 
+  375  vi a2.ldif 
+  376  ldapadd -D "cn=ldapadm,dc=ensaf,dc=local" -W -x -f a2.ldif 
+  377  history >> hist2.txt

@@ -1,0 +1,7 @@
+dn: uid=ilyass,ou=People,dc=ensaf,dc=local
+changetype: modify
+add: objectClass
+objectClass: Mail2
+-
+add: mail2
+mail2: htefho

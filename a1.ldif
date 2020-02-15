@@ -1,0 +1,4 @@
+dn: uid=ilyass,ou=People,dc=ensaf,dc=local
+changetype: modify
+replace: mail2
+mail2: AABB

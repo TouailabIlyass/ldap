@@ -1,0 +1,7 @@
+dn: uid=ilyass,ou=People,dc=ensaf,dc=local
+changetype: modify
+add: objectClass
+objectClass: Studentinfo
+-
+add: studentid
+studentid: 4653535
